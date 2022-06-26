@@ -1,4 +1,4 @@
-package com.atitienei_daniel.receipe
+package com.atitienei_daniel.recipe
 
 import org.junit.Test
 
