@@ -1,4 +1,4 @@
-package com.atitienei_daniel.receipe
+package com.atitienei_daniel.recipe
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

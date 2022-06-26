@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="recipe"
+            type="com.atitienei_daniel.recipe.domain.model.Recipe" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_height="250dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:id="@+id/foodCardImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                app:foodImage="@{recipe}"
+                android:scaleType="centerCrop"
+                android:src="@drawable/salad" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/food_card_gradient" />
+
+            <TextView
+                android:id="@+id/foodCardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_gravity="bottom"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:text="@{recipe.title}"
+                android:textColor="@color/white" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+</layout>

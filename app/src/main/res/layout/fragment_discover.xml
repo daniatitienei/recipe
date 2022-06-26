@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.screens.discover.DiscoverFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/discoverToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/discovery_actions"
+            app:title="@string/discover"
+            app:titleMarginStart="20dp"
+            android:paddingEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/discoverTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text="@string/discover_recipes"
+            android:layout_marginBottom="10dp"
+            android:textSize="28sp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recipeRecyclerView"
+            android:layout_width="409dp"
+            android:layout_height="627dp"
+            android:layout_gravity="center_horizontal"
+            android:clipToPadding="false"
+            android:paddingHorizontal="20dp"
+            android:useDefaultMargins="true"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+
+    </LinearLayout>
+
+</layout>
